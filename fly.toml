@@ -1,0 +1,16 @@
+app = "hello-server"
+primary_region = "ams"
+
+[build]
+
+[[services]]
+  internal_port = 1848
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 1848
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 256
